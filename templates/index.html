@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reciclaje Inteligente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+    <h1 style="color:red">🌿</h1>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>Reciclaje Inteligente</h1>
+        <p class="sub">Transforma hoy para un mejor mañana</p>
+    </header>
+
+    <!-- CARRUSEL -->
+    <section class="carousel">
+        <div class="slides">
+            <img src="{{ url_for('static', filename='img/carrusel1.jpg') }}" alt="imagen 1">
+            <img src="{{ url_for('static', filename='img/carrusel2.jpg') }}" alt="imagen 2">
+            <img src="{{ url_for('static', filename='img/carrusel3.jpg') }}" alt="imagen 3">
+        </div>
+    </section>
+
+    <!-- FRASE -->
+    <section class="frase">
+        <p>“Reciclar no es una obligación… es un acto de amor por la Tierra ”</p>
+    </section>
+
+    <!-- BOTONES -->
+    <section class="botones">
+        <a href="/info" class="hoja-btn">
+            <img src="{{ url_for('static', filename='img/hoja.png') }}">
+            <span>Información</span>
+        </a>
+
+        <a href="/tipos" class="hoja-btn">
+            <img src="{{ url_for('static', filename='img/hoja.png') }}">
+            <span>Tipos de reciclaje</span>
+        </a>
+
+        <a href="/contaminacion" class="hoja-btn">
+            <img src="{{ url_for('static', filename='img/hoja.png') }}">
+            <span>Tipos de contaminacion</span>
+        </a>
+
+        <a href="/impacto" class="hoja-btn">
+            <img src="{{ url_for('static', filename='img/hoja.png') }}">
+            <span>Impacto en la sociedad</span>
+        </a>
+
+        <a href="/cuestionario" class="hoja-btn">
+            <img src="{{ url_for('static', filename='img/hoja.png') }}">
+            <span>Cuestionario</span>
+        </a>
+    </section>
+ <footer>
+        &copy; 2026 | Trabajo escolar sobre contaminación y cuidado del medio ambiente
+    </footer>
+</body>
+</html>

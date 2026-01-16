@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información sobre el Reciclaje</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+
+    <style>
+        .info-container {
+            max-width: 850px;
+            margin: 40px auto;
+            background: #f4fafa;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .info-container h1 {
+            text-align: center;
+            color: #2e7d32;
+            margin-bottom: 25px;
+        }
+
+        .info-container h3 {
+            color: #388e3c;
+            margin-top: 25px;
+        }
+
+        .info-container p {
+            color: #37474f;
+            line-height: 1.6;
+            margin-top: 8px;
+        }
+
+        .info-container ul {
+            margin-top: 10px;
+            padding-left: 22px;
+            color: #37474f;
+        }
+
+        .info-container ul li {
+            margin-bottom: 6px;
+        }
+
+        .acciones {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .acciones a {
+            text-decoration: none;
+            background: #2e7d32;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .acciones a:hover {
+            background: #1b5e20;
+        }
+
+        .imagenes {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .imagen {
+            width: 200px;
+            height: 150px;
+            background: #e0e0e0;
+            border-radius: 12px;
+        }
+        .imagen img {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    border-radius: 12px;
+    }
+    </style>
+</head>
+
+<body>
+
+<div class="info-container">
+
+    <h1>Información sobre el Reciclaje</h1>
+
+    <h3>¿Qué es el reciclaje?</h3>
+    <p>
+        El reciclaje es un proceso mediante el cual los materiales que ya han sido utilizados, como el papel, el plástico, el vidrio o el metal, 
+        se recolectan y se transforman para darles una nueva vida. En lugar de convertirse en basura, estos materiales se aprovechan nuevamente, 
+        lo que ayuda a reducir la cantidad de desechos, disminuir la contaminación y conservar los recursos naturales. Además, el reciclaje fomenta
+        una actitud responsable con el medio ambiente y contribuye al cuidado del planeta para las futuras generaciones.
+    </p>
+
+    <h3>¿Por qué es importante reciclar?</h3>
+    <p>
+        Reciclar es importante porque ayuda a reducir la contaminación y a cuidar
+        los recursos naturales. Además, permite que haya menos basura en calles,
+        ríos y espacios naturales.
+    </p>
+
+    <h3>Beneficios del reciclaje</h3>
+    <ul>
+        <li>Reduce la contaminación del aire, del agua y del suelo.</li>
+        <li>Disminuye la cantidad de residuos que se generan diariamente.</li>
+        <li>Evita la acumulación de basura en espacios naturales y urbanos.</li>
+        <li>Ahorra recursos naturales como árboles, petróleo y minerales.</li>
+        <li>Reduce el consumo de energía en la fabricación de nuevos productos.</li>
+        <li>Disminuye las emisiones de gases que provocan el calentamiento global.</li>
+    </ul>
+
+    <h3>Materiales que se pueden reciclar</h3>
+    <ul>
+        <li>Papel y cartón</li>
+        <li>Plástico</li>
+        <li>Vidrio</li>
+        <li>Metal</li>
+    </ul>
+
+    <h3>Impacto del reciclaje en el medio ambinete</h3>
+    <p>
+        El reciclaje tiene un impacto positivo en el medio ambiente, ya que reduce la extracción de recursos naturales, disminuye
+        la contaminación y ayuda a conservar los ecosistemas. Al reciclar, se evita que grandes cantidades de residuos terminen 
+        en ríos, mares y suelos, protegiendo así la vida de plantas y animales. Además, el reciclaje contribuye a un uso más
+        responsable de los recursos y promueve un equilibrio entre el desarrollo humano y el cuidado del planeta.
+    </p>
+
+<div class="imagenes">
+    <div class="imagen">
+        <img src="{{ url_for('static', filename='img/info.jpg') }}">
+    </div>
+    <div class="imagen">
+        <img src="{{ url_for('static', filename='img/info1.jpg') }}">
+    </div>
+</div>
+
+    <div class="acciones">
+        <a href="/">Volver al inicio</a>
+    </div>
+
+</div>
+
+</body>
+</html>

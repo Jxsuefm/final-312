@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini cuestionario</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #fafafa, #e0f7fa); margin: 0; padding: 40px; }
+        .container { max-width: 900px; margin: auto; background: #ffffff; padding: 35px; border-radius: 14px; box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #00695c; margin-bottom: 25px; }
+        h2 { color: #00796b; margin-top: 40px; margin-bottom: 15px; }
+        .pregunta { margin-bottom: 20px; }
+        .pregunta h3 { color: #00796b; margin-bottom: 10px; }
+        textarea { width: 100%; border-radius: 8px; border: 1px solid #b2dfdb; padding: 10px; resize: none; font-family: inherit; }
+        .btn { display: block; margin: 30px auto 0; background: #00796b; color: white; border: none; padding: 12px 26px; border-radius: 10px; font-weight: 500; text-decoration: none; text-align: center; cursor:pointer; }
+        .back { display: block; text-align: center; margin-bottom: 20px; text-decoration: none; color: #00796b; font-weight: 500; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        table, th, td { border: 1px solid #b2dfdb; }
+        th, td { padding: 8px; text-align: left; }
+        th { background-color: #00796b; color: white; }
+        .eliminar-btn { background: #d32f2f; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Mini cuestionario</h1>
+
+    <form method="POST">
+        <div class="pregunta">
+            <h3>¿Qué es el reciclaje?</h3>
+            <textarea name="que_es_reciclaje" rows="3" placeholder="responde aqui" required></textarea>
+        </div>
+
+        <div class="pregunta">
+            <h3>¿Conoces el significado de las 3 R?</h3>
+            <textarea name="significado_3r" rows="3" placeholder="responde aqui" required></textarea>
+        </div>
+
+        <div class="pregunta">
+            <h3>¿Sabes cómo reciclar de una manera correcta?</h3>
+            <textarea name="reciclar_correctamente" rows="3" placeholder="responde aqui" required></textarea>
+        </div>
+
+        <div class="pregunta">
+            <h3>¿Conoces los tipos de reciclaje que existen?</h3>
+            <textarea name="tipos_de_reciclaje" rows="3" placeholder="responde aqui" required></textarea>
+        </div>
+
+        <div class="pregunta">
+            <h3>¿Sabes la importancia de reciclar?</h3>
+            <textarea name="importancia_reciclar" rows="3" placeholder="responde aqui" required></textarea>
+        </div>
+
+        <div class="pregunta">
+            <h3>¿Cómo ayuda el reciclaje a reducir la contaminación?</h3>
+            <textarea name="como_ayuda_contaminacion" rows="3" placeholder="responde aqui" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Enviar Cuestionario</button>
+    </form>
+
+    <a href="/" class="back">Volver al inicio</a>
+
+    <!-- TABLA DE REGISTROS -->
+    {% if registros %}
+    <h2>Registros enviados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>¿Qué es el reciclaje?</th>
+                <th>Significado 3R</th>
+                <th>Reciclar correctamente</th>
+                <th>Tipos de reciclaje</th>
+                <th>Importancia de reciclar</th>
+                <th>Cómo ayuda a reducir contaminación</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reg in registros %}
+            <tr>
+                <td>{{ reg.id }}</td>
+                <td>{{ reg.que_es_reciclaje }}</td>
+                <td>{{ reg.significado_3r }}</td>
+                <td>{{ reg.reciclar_correctamente }}</td>
+                <td>{{ reg.tipos_de_reciclaje }}</td>
+                <td>{{ reg.importancia_reciclar }}</td>
+                <td>{{ reg.como_ayuda_contaminacion }}</td>
+                <td>
+                    <form action="{{ url_for('eliminar', id=reg.id) }}" method="POST" onsubmit="return confirm('¿Estás seguro de eliminar este registro?');">
+                        <button type="submit" class="eliminar-btn">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Los tipos de reciclaje</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff;
+            color: #48dd84;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 38px;
+            border-radius: 14px;
+            box-shadow: 0 0 20px #06a749;
+        }
+
+        h1 {
+            text-align: center;
+            color: #349c52;
+            text-shadow: 0 0 10px #2be234;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #1b733b;
+            text-shadow: 0 0 10px #0dad48;
+        }
+
+        p {
+            font-size: 15px;
+            color: #000000;
+            line-height: 1.7;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #55e984;
+            font-weight: 500;
+        }
+
+        .back:hover {
+            color: #41d581;
+            text-shadow: 0 0 10px #58ea99;
+        }
+
+        .section {
+            margin-top: 30px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 10px;
+            border: 1px solid #0dad45;
+            box-shadow: 0 0 12px #0dad42;
+        }
+
+        .imagen {
+            width: 260px;
+            height: 180px;
+            margin: 50px auto;
+            border-radius: 12px;
+            background: transparent;
+        }
+
+        .imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Tipos de reciclaje</h1>
+
+    <p class="intro">
+        Saber cuáles son los tipos de reciclaje y su clasificación es indispensable para poder contribuir en el cuidado del medio ambiente, por esta importante razón, hoy te explicamos en qué consisten, cómo puedes incluirlos en tu estilo de vida, veamos cuáles son:
+    </p>
+
+    <div class="section">
+        <h2>RECICLAJE MECÁNICO</h2>
+        <p>Aquí podemos encontrar todos los procesos que incluyen la asistencia de máquinas y el trabajo manual para separar los residuos.</p>
+    </div>
+
+    <div class="section">
+        <h2>RECICLAJE QUÍMICO</h2>
+        <p>En este punto, se modifican las propiedades de los materiales a reciclar para poder llevar a cabo su descomposición.</p>
+    </div>
+
+    <div class="section">
+        <h2>RECICLAJE DE RESIDUOS ORGÁNICOS</h2>
+        <p>Su objetivo es degradar todos los desechos orgánicos con o sin la ayuda del oxígeno. Estos residuos no solo provienen de casa sino también de las industrias agroalimentarias.</p>
+    </div>
+
+    <div class="section">
+        <h2>Clasificación de los residuos</h2>
+        <p>Como notamos anteriormente, no todos los materiales tienen el mismo proceso de reciclaje. Su separación, limpieza y transformación dependerá de sus componentes y características.</p>
+    </div>
+
+    <div class="section">
+        <h2>1. Plásticos flexibles</h2>
+        <p>Están presentes en las botellas de agua, de refresco, jugo o envases de alimentos. Separarlos ahorra aproximadamente una tonelada de petróleo.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Plásticos rígidos</h2>
+        <p>Incluyen botellas de shampoo, detergentes y ciertos envases de leche o jugo.</p>
+    </div>
+
+    <div class="section">
+        <h2>3. Tetra Pak® / SIG®</h2>
+        <p>Por ejemplo: cajas de leche o jugos. Su reciclaje ayuda a ahorrar muchos recursos naturales.</p>
+    </div>
+
+    <div class="section">
+        <h2>4. Papel y cartón</h2>
+        <p>Pueden reciclarse hasta cinco veces. Incluye cajas, periódicos, revistas o bolsas de papel.</p>
+    </div>
+
+    <div class="section">
+        <h2>5. Orgánicos</h2>
+        <p>Facilitan la creación de composta o fertilizantes.</p>
+    </div>
+
+    <div class="imagen">
+        <img src="{{ url_for('static', filename='img/tipos.jpg') }}">
+    </div>
+
+    <a class="back" href="/">Regresar</a>
+
+</div>
+
+</body>
+</html>
